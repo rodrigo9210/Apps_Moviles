@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quiz View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuizViewController" customModule="Clase2_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaY-88-Nby">
+                                <rect key="frame" x="20" y="80.666666666666671" width="374" height="30"/>
+                                <state key="normal" title="Muestra la siguiente pregunta"/>
+                                <connections>
+                                    <action selector="botonDePreguntaPresionado" destination="BYZ-38-t0r" eventType="touchUpInside" id="cN7-VA-TW7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿¿??" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAp-6h-hBD">
+                                <rect key="frame" x="20" y="794" width="374" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rT7-KE-PVa">
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
+                                <state key="normal" title="Respuesta"/>
+                                <connections>
+                                    <action selector="botonDeRespuestaPresionado" destination="BYZ-38-t0r" eventType="touchUpInside" id="i0M-Rl-Fv9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSQ-hr-SaP">
+                                <rect key="frame" x="20" y="44" width="374" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qSQ-hr-SaP" secondAttribute="trailing" constant="20" id="0ee-SE-81r"/>
+                            <constraint firstItem="CaY-88-Nby" firstAttribute="top" secondItem="qSQ-hr-SaP" secondAttribute="bottom" constant="8" id="NDr-48-ODw"/>
+                            <constraint firstItem="qSQ-hr-SaP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Pgd-Ez-rmc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rT7-KE-PVa" secondAttribute="trailing" constant="20" id="SRZ-bP-z48"/>
+                            <constraint firstItem="qSQ-hr-SaP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Sfr-zf-UoO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TAp-6h-hBD" secondAttribute="trailing" constant="20" id="aRC-2y-CaY"/>
+                            <constraint firstItem="TAp-6h-hBD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ahE-tV-xgf"/>
+                            <constraint firstItem="rT7-KE-PVa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ax9-KJ-NxL"/>
+                            <constraint firstItem="rT7-KE-PVa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ejK-GC-M8K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CaY-88-Nby" secondAttribute="trailing" constant="20" id="fjP-bR-Wcj"/>
+                            <constraint firstItem="rT7-KE-PVa" firstAttribute="top" secondItem="TAp-6h-hBD" secondAttribute="bottom" constant="8" id="hnh-QB-NSM"/>
+                            <constraint firstItem="CaY-88-Nby" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tQc-ae-oRo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelDePregunta" destination="qSQ-hr-SaP" id="5Eu-Pd-Aw4"/>
+                        <outlet property="labelDeRespuesta" destination="TAp-6h-hBD" id="LUM-Mc-Ocs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

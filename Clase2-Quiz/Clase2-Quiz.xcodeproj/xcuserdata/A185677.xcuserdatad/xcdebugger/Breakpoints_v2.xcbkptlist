@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Clase2-Quiz/QuizViewController.swift"
+            timestampString = "587955186.787191"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "QuizViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Clase2_Quiz.QuizViewController.labelDeRespuesta.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Clase2-Quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/A185677/Documents/Clase2-Quiz/Clase2-Quiz/QuizViewController.swift"
+                  timestampString = "587953129.673201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Clase2_Quiz.QuizViewController.labelDeRespuesta.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Clase2-Quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/A185677/Documents/Clase2-Quiz/Clase2-Quiz/QuizViewController.swift"
+                  timestampString = "587953129.675076"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Clase2_Quiz.QuizViewController.labelDeRespuesta.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Clase2-Quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/A185677/Documents/Clase2-Quiz/Clase2-Quiz/QuizViewController.swift"
+                  timestampString = "587953129.676111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Clase2_Quiz.QuizViewController.labelDeRespuesta.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Clase2-Quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/A185677/Documents/Clase2-Quiz/Clase2-Quiz/QuizViewController.swift"
+                  timestampString = "587953129.677749"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Clase2_Quiz.QuizViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Clase2_Quiz.QuizViewController"
+                  moduleName = "Clase2-Quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/A185677/Documents/Clase2-Quiz/Clase2-Quiz/QuizViewController.swift"
+                  timestampString = "587953129.678721"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "311">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Clase2_Quiz.QuizViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Clase2_Quiz.QuizViewController&gt;"
+                  moduleName = "Clase2-Quiz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/A185677/Documents/Clase2-Quiz/Clase2-Quiz/QuizViewController.swift"
+                  timestampString = "587953129.679692"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "213">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
