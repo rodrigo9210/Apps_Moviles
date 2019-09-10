@@ -18,20 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="htF-OS-4ou" customClass="HipnosisView" customModule="Hipnosis" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9Q-yZ-cko">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="htF-OS-4ou" secondAttribute="trailing" id="0vO-8T-wlb"/>
-                            <constraint firstItem="htF-OS-4ou" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HIy-w7-GRn"/>
-                            <constraint firstItem="htF-OS-4ou" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wcp-9D-ObO"/>
-                            <constraint firstItem="htF-OS-4ou" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hGL-n1-yVD"/>
+                            <constraint firstItem="i9Q-yZ-cko" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="G9f-wW-5Dg"/>
+                            <constraint firstItem="i9Q-yZ-cko" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="TSa-QW-4dd"/>
+                            <constraint firstAttribute="bottom" secondItem="i9Q-yZ-cko" secondAttribute="bottom" id="dhi-27-3ce"/>
+                            <constraint firstItem="i9Q-yZ-cko" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kTG-ZJ-Pcr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="HipnosisScroll" destination="i9Q-yZ-cko" id="odt-Pb-MOh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

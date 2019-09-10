@@ -10,7 +10,13 @@ import UIKit
 
 //subclase de UIView
 class HipnosisView: UIView {
-    private var colorDelCirculo : UIColor = .blue
+    
+    private var colorDelCirculo : UIColor = .blue {
+        //ESTABLECER UN PROPERTY OBSERVER
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     func inicializaVista(){
         self.backgroundColor = .clear
@@ -30,9 +36,16 @@ class HipnosisView: UIView {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("ME TOCARON")
+        //creacion de numeros aleatorios entre 0 y 1 de 3 formas diferentes
+        let rojo = CGFloat(arc4random() % 100) / 100
+        let verde = CGFloat(arc4random_uniform(100)) / 100
+        let azul = CGFloat.random(in: 0...100) / 100
+        let colorRandom = UIColor(displayP3Red: rojo, green: verde, blue: azul, alpha: 1)
+        print(colorRandom)
+        self.colorDelCirculo = colorRandom
     }
     
+    // LA FUNCION DRAW NUNCA SE LLAMA
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
         
