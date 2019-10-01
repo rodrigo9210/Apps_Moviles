@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qt0-iO-fFR">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Agendar-->
+        <scene sceneID="DTJ-RB-fjj">
+            <objects>
+                <viewController id="lNd-96-C0z" customClass="RecordatorioViewController" customModule="HipnoHora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ir7-rN-AeV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zO8-bz-8AG">
+                                <rect key="frame" x="162.5" y="564" width="89" height="30"/>
+                                <state key="normal" title="Agendar Cita"/>
+                                <connections>
+                                    <action selector="AgendarCita:" destination="lNd-96-C0z" eventType="touchUpInside" id="oul-Up-WkQ"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="uSS-Rg-28p">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="590975177.35789597">
+                                    <!--2019-09-23 23:46:17 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zO8-bz-8AG" firstAttribute="top" secondItem="uSS-Rg-28p" secondAttribute="bottom" constant="8" symbolic="YES" id="91b-1j-gUC"/>
+                            <constraint firstItem="uSS-Rg-28p" firstAttribute="top" secondItem="drV-Gu-gtg" secondAttribute="top" constant="296" id="MGt-ei-D2N"/>
+                            <constraint firstItem="zO8-bz-8AG" firstAttribute="centerX" secondItem="uSS-Rg-28p" secondAttribute="centerX" id="PaD-F8-C7H"/>
+                            <constraint firstItem="uSS-Rg-28p" firstAttribute="leading" secondItem="drV-Gu-gtg" secondAttribute="leading" id="ZoS-r7-huI"/>
+                            <constraint firstItem="uSS-Rg-28p" firstAttribute="trailing" secondItem="drV-Gu-gtg" secondAttribute="trailing" id="cBz-ca-nds"/>
+                            <constraint firstItem="drV-Gu-gtg" firstAttribute="bottom" secondItem="uSS-Rg-28p" secondAttribute="bottom" constant="257" id="lNG-P1-EIV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="drV-Gu-gtg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Agendar" image="Hora.png" id="PWo-Vp-qP0"/>
+                    <connections>
+                        <outlet property="DatePicker" destination="uSS-Rg-28p" id="cv4-BB-0Ur"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6QA-fx-wzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="603" y="-300"/>
+        </scene>
+        <!--Hipnosis-->
+        <scene sceneID="Bs5-y3-08l">
+            <objects>
+                <viewController id="1GZ-qm-7dV" customClass="HipnosisViewController" customModule="HipnoHora" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b4B-0B-aZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfa-Zn-KT0" customClass="HipnosisView" customModule="HipnoHora" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kfa-Zn-KT0" firstAttribute="trailing" secondItem="LWl-vZ-ROC" secondAttribute="trailing" id="AyP-MC-VWK"/>
+                            <constraint firstItem="kfa-Zn-KT0" firstAttribute="bottom" secondItem="LWl-vZ-ROC" secondAttribute="bottom" id="Fnj-LI-FeX"/>
+                            <constraint firstItem="kfa-Zn-KT0" firstAttribute="top" secondItem="b4B-0B-aZ3" secondAttribute="top" id="e3S-sI-Xhf"/>
+                            <constraint firstItem="kfa-Zn-KT0" firstAttribute="leading" secondItem="LWl-vZ-ROC" secondAttribute="leading" id="fCH-7c-g5H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LWl-vZ-ROC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hipnosis" id="bMM-VU-T8K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4yo-F2-bcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602.89855072463774" y="474.77678571428567"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="CCf-CI-gne">
+            <objects>
+                <tabBarController id="Qt0-iO-fFR" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xoy-qQ-3eY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1GZ-qm-7dV" kind="relationship" relationship="viewControllers" id="oBX-YG-LA4"/>
+                        <segue destination="lNd-96-C0z" kind="relationship" relationship="viewControllers" id="3o2-yF-NNI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fe-wC-2Zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="74"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Hora.png" width="30" height="30"/>
+    </resources>
+</document>

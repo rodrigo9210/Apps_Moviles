@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YA7-zP-4tP">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Primero-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GenericoViewController" customModule="miNavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGk-Bz-6B9">
+                                <rect key="frame" x="182" y="399" width="50" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1a-Fb-Stf">
+                                <rect key="frame" x="182" y="505" width="52" height="30"/>
+                                <state key="normal" title="Navega"/>
+                                <connections>
+                                    <action selector="botonSiguiente" destination="BYZ-38-t0r" eventType="touchUpInside" id="e7Y-SC-zc9"/>
+                                    <segue destination="mIH-XJ-SaX" kind="show" id="IZp-Bc-BDk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TGk-Bz-6B9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="311" id="HxQ-kW-0le"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E1a-Fb-Stf" secondAttribute="trailing" constant="180" id="JKS-am-op9"/>
+                            <constraint firstItem="TGk-Bz-6B9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="182" id="UN9-le-T7g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E1a-Fb-Stf" secondAttribute="bottom" constant="327" id="fYK-qB-z5a"/>
+                            <constraint firstItem="E1a-Fb-Stf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="182" id="kFi-6T-Iqu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TGk-Bz-6B9" secondAttribute="trailing" constant="182" id="mUu-Ve-GFJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Primero" id="H7t-fs-n5w"/>
+                    <connections>
+                        <outlet property="labelCuenta" destination="TGk-Bz-6B9" id="No0-RO-OHN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1159.4202898550725" y="-139.28571428571428"/>
+        </scene>
+        <!--Segundo-->
+        <scene sceneID="F5V-n5-i4Q">
+            <objects>
+                <viewController id="mIH-XJ-SaX" customClass="GenericoViewController" customModule="miNavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="90F-hW-9Mt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdU-Ox-CxG">
+                                <rect key="frame" x="182" y="399" width="50" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaF-qe-Hsy">
+                                <rect key="frame" x="182" y="505" width="52" height="30"/>
+                                <state key="normal" title="Navega"/>
+                                <connections>
+                                    <action selector="botonSiguiente" destination="mIH-XJ-SaX" eventType="touchUpInside" id="Za5-h5-awy"/>
+                                    <segue destination="HIj-LH-6na" kind="show" id="j11-N7-o2O"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AaF-qe-Hsy" firstAttribute="leading" secondItem="dC8-oo-loF" secondAttribute="leading" constant="182" id="4On-7c-A6s"/>
+                            <constraint firstItem="JdU-Ox-CxG" firstAttribute="leading" secondItem="dC8-oo-loF" secondAttribute="leading" constant="182" id="7om-hS-wmw"/>
+                            <constraint firstItem="dC8-oo-loF" firstAttribute="trailing" secondItem="AaF-qe-Hsy" secondAttribute="trailing" constant="180" id="PSb-fv-HQ9"/>
+                            <constraint firstItem="JdU-Ox-CxG" firstAttribute="top" secondItem="dC8-oo-loF" secondAttribute="top" constant="311" id="UuR-jY-P7Q"/>
+                            <constraint firstItem="dC8-oo-loF" firstAttribute="bottom" secondItem="AaF-qe-Hsy" secondAttribute="bottom" constant="327" id="XA9-Km-t2n"/>
+                            <constraint firstItem="dC8-oo-loF" firstAttribute="trailing" secondItem="JdU-Ox-CxG" secondAttribute="trailing" constant="182" id="bfd-02-TDU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dC8-oo-loF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Segundo" id="Sov-3u-xB2"/>
+                    <connections>
+                        <outlet property="labelCuenta" destination="JdU-Ox-CxG" id="nzq-ss-Eur"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZ9-tO-zem" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-320" y="-139"/>
+        </scene>
+        <!--Tercero-->
+        <scene sceneID="lMf-nb-wjQ">
+            <objects>
+                <viewController id="HIj-LH-6na" customClass="GenericoViewController" customModule="miNavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BXO-kj-yzO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZe-1J-CUQ">
+                                <rect key="frame" x="182" y="399" width="50" height="98"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="82"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iNh-k9-ENs">
+                                <rect key="frame" x="144" y="505" width="126" height="30"/>
+                                <state key="normal" title="Regreso a Primero"/>
+                                <connections>
+                                    <action selector="regresoAPrimero:" destination="HIj-LH-6na" eventType="touchUpInside" id="Rak-ui-bZn"/>
+                                    <segue destination="Chn-mW-ymd" kind="unwind" unwindAction="regresoAPrimero:" id="rs1-Xz-bcP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aZe-1J-CUQ" firstAttribute="top" secondItem="Bsn-F1-prz" secondAttribute="top" constant="311" id="G0G-z4-KD5"/>
+                            <constraint firstItem="Bsn-F1-prz" firstAttribute="trailing" secondItem="aZe-1J-CUQ" secondAttribute="trailing" constant="182" id="VGi-Qs-Qmp"/>
+                            <constraint firstItem="aZe-1J-CUQ" firstAttribute="leading" secondItem="Bsn-F1-prz" secondAttribute="leading" constant="182" id="XvU-1D-h5T"/>
+                            <constraint firstItem="Bsn-F1-prz" firstAttribute="bottom" secondItem="iNh-k9-ENs" secondAttribute="bottom" constant="327" id="eH1-DK-86B"/>
+                            <constraint firstItem="iNh-k9-ENs" firstAttribute="leading" secondItem="Bsn-F1-prz" secondAttribute="leading" constant="144" id="yX5-xw-lMr"/>
+                            <constraint firstItem="Bsn-F1-prz" firstAttribute="trailing" secondItem="iNh-k9-ENs" secondAttribute="trailing" constant="144" id="zyy-VI-XBg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bsn-F1-prz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tercero" id="RaA-Yd-C0O"/>
+                    <connections>
+                        <outlet property="labelCuenta" destination="aZe-1J-CUQ" id="dis-C1-g75"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWw-gq-lly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Chn-mW-ymd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="-139"/>
+        </scene>
+        <!--Cuenta Navigation View Controller-->
+        <scene sceneID="WGS-n0-JzZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YA7-zP-4tP" customClass="CuentaNavigationViewController" customModule="miNavigationController" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nMO-AT-nOV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rEf-sN-upE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KI6-8g-pCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2014" y="-139"/>
+        </scene>
+    </scenes>
+</document>

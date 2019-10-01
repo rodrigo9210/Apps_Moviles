@@ -18,6 +18,10 @@ class HipnosisView: UIView {
         }
     }
     
+    override var canBecomeFirstResponder: Bool{
+        return true
+    }
+    
     func inicializaVista(){
         self.backgroundColor = .clear
     }
@@ -43,6 +47,16 @@ class HipnosisView: UIView {
         let colorRandom = UIColor(displayP3Red: rojo, green: verde, blue: azul, alpha: 1)
         print(colorRandom)
         self.colorDelCirculo = colorRandom
+    }
+    
+    
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake{
+            print("Esta Temblando")
+            colorDelCirculo = .red
+        }
+        //decirle que somos first responder en el viewcontroller
     }
     
     // LA FUNCION DRAW NUNCA SE LLAMA
