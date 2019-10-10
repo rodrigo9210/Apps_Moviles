@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Correo View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CorreoViewController" customModule="MiSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egd-K5-iA9">
+                                <rect key="frame" x="187" y="433" width="40" height="30"/>
+                                <state key="normal" title="Editar"/>
+                                <connections>
+                                    <segue destination="Cfu-eO-6be" kind="presentation" identifier="editar" id="p1f-Gs-vOL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmg-Wg-VEY">
+                                <rect key="frame" x="187" y="471" width="40" height="30"/>
+                                <state key="normal" title="Timer"/>
+                                <connections>
+                                    <action selector="Temporizador" destination="BYZ-38-t0r" eventType="touchUpInside" id="rAC-tD-72k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="oijij@ojoij.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xc4-K7-vFL">
+                                <rect key="frame" x="20" y="390" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu tu correo es:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJK-hR-8Bx">
+                                <rect key="frame" x="20" y="347" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="egd-K5-iA9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Idy-Sg-m6s"/>
+                            <constraint firstItem="egd-K5-iA9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MQY-ce-iDi"/>
+                            <constraint firstItem="wmg-Wg-VEY" firstAttribute="top" secondItem="egd-K5-iA9" secondAttribute="bottom" constant="8" id="Y3O-G0-Ou3"/>
+                            <constraint firstItem="wmg-Wg-VEY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nkO-zH-HnF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelDeCorreo" destination="xc4-K7-vFL" id="rjN-Lz-ihT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-475.36231884057975" y="121.875"/>
+        </scene>
+        <!--Editor View Controller-->
+        <scene sceneID="wYg-vl-r8P">
+            <objects>
+                <viewController id="Cfu-eO-6be" customClass="EditorViewController" customModule="MiSegue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qdm-kT-rJo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGH-sU-LFB">
+                                <rect key="frame" x="192" y="433" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="ok:" destination="Cfu-eO-6be" eventType="touchUpInside" id="Gc8-NX-oTc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edita tu correo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTO-gD-TmR">
+                                <rect key="frame" x="20" y="355" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfz-Ch-Br2">
+                                <rect key="frame" x="20" y="384" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bGH-sU-LFB" firstAttribute="centerX" secondItem="Qdm-kT-rJo" secondAttribute="centerX" id="9U7-Wt-pJE"/>
+                            <constraint firstItem="bGH-sU-LFB" firstAttribute="centerY" secondItem="Qdm-kT-rJo" secondAttribute="centerY" id="ZcD-FT-ghg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hr8-cy-FCS"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="54J-Ch-624" appends="YES" id="aRw-0Q-Xn4"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="botonOk" destination="bGH-sU-LFB" id="SyN-fR-4JK"/>
+                        <outlet property="campoDeEdicion" destination="Hfz-Ch-Br2" id="M3f-mb-YNd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HdO-AT-4vf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="54J-Ch-624">
+                    <connections>
+                        <action selector="tapRecibido:" destination="Cfu-eO-6be" id="Scx-wa-gfF"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="553.62318840579712" y="121.875"/>
+        </scene>
+    </scenes>
+</document>
