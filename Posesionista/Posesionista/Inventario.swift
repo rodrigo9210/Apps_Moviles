@@ -16,9 +16,25 @@ class Inventario {
         return todasLasCosas.last!
     }
     
-    init(){
-        for _ in 0..<5 {
-            creaCosa()
+    func eliminaCosa(cosaAELiminar: Cosa){
+        if let indiceDeCosa = todasLasCosas.firstIndex(of: cosaAELiminar) {
+            todasLasCosas.remove(at: indiceDeCosa)
         }
+        
     }
+    
+    func reordena(de: Int, hacia: Int){
+        if de == hacia {
+            return
+        }
+        
+        let cosaAMover = todasLasCosas[de]
+        todasLasCosas.remove(at: de)
+        todasLasCosas.insert(cosaAMover, at: hacia)
+    }
+//    init(){
+//        for _ in 0..<5 {
+//            creaCosa()
+//        }
+//    }
 }
