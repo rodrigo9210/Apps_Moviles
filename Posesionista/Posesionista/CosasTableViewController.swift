@@ -10,7 +10,13 @@ import UIKit
 
 class CosasTableViewController: UITableViewController {
 
-    let miInventario = Inventario()
+    var miInventario : Inventario!
+    let inventarioDeImagenes = InventarioDeImagenes()
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.navigationItem.leftBarButtonItem = editButtonItem
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,11 @@ class CosasTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -48,18 +59,18 @@ class CosasTableViewController: UITableViewController {
     }
     
     
-    @IBAction func cambiaModoDeEdicion(_ sender: UIButton) {
-        if isEditing {
-            sender.setTitle("Editar", for: .normal)
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Listo", for: .normal)
-            setEditing(true, animated: true)
-        }
-    }
+//    @IBAction func cambiaModoDeEdicion(_ sender: UIButton) {
+//        if isEditing {
+//            sender.setTitle("Editar", for: .normal)
+//            setEditing(false, animated: true)
+//        } else {
+//            sender.setTitle("Listo", for: .normal)
+//            setEditing(true, animated: true)
+//        }
+//    }
     
     
-    @IBAction func añadeCosa(_ sender: UIButton) {
+    @IBAction func añadeCosa(_ sender: UIBarButtonItem) {
         let nuevaCosa = miInventario.creaCosa()
         let indiceDeNuevaCosa = miInventario.todasLasCosas.firstIndex(of: nuevaCosa)!
         //let ultimaFila = tableView.numberOfRows(inSection: 0)
@@ -82,6 +93,7 @@ class CosasTableViewController: UITableViewController {
             // Delete the row from the data source
             let cosaABorrar = miInventario.todasLasCosas[indexPath.row]
             miInventario.eliminaCosa(cosaAELiminar: cosaABorrar)
+            self.inventarioDeImagenes.borraImagen(paraLaLLave: cosaABorrar.llaveCosa)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -111,6 +123,7 @@ class CosasTableViewController: UITableViewController {
             if let filaSeleccionada = tableView.indexPathForSelectedRow {
                 let detalleVC = segue.destination as! DetalleViewController
                 detalleVC.cosaADetallar = miInventario.todasLasCosas[filaSeleccionada.row]
+                detalleVC.inventarioDeImagenes = self.inventarioDeImagenes
             }
         }
     }

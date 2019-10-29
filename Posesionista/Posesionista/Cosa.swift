@@ -8,18 +8,37 @@
 
 import Foundation
 
-class Cosa : NSObject {
+class Cosa : NSObject, NSCoding {
     
-    var nombre :  String = ""
+    var nombre : String = ""
     var valorEnPesos : Int
     var numeroDeSerie : String?
     let fechaDeCreacion : Date
+    let llaveCosa : String
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.nombre, forKey: "nombre")
+        aCoder.encode(self.valorEnPesos, forKey: "valorEnPesos")
+        aCoder.encode(self.numeroDeSerie, forKey: "numeroDeSerie")
+        aCoder.encode(self.fechaDeCreacion, forKey: "fechaDeCreacion")
+        aCoder.encode(self.llaveCosa, forKey: "llaveCosa")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.nombre = aDecoder.decodeObject(forKey: "nombre") as! String
+        self.valorEnPesos = aDecoder.decodeInteger(forKey: "valorEnPesos")
+        self.numeroDeSerie = aDecoder.decodeObject(forKey: "numeroDeSerie") as! String?
+        self.fechaDeCreacion = aDecoder.decodeObject(forKey: "fechaDeCreacion") as! Date
+        self.llaveCosa = aDecoder.decodeObject(forKey: "llaveCosa") as! String
+        super.init()
+    }
     
     init(nombre: String, valor: Int, serie: String?, alta: Date) {
         self.nombre = nombre
         self.valorEnPesos = valor
         self.numeroDeSerie = serie
         self.fechaDeCreacion = alta
+        self.llaveCosa = UUID().uuidString
         super.init()
     }
     

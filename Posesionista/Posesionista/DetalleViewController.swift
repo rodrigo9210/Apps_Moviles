@@ -8,24 +8,85 @@
 
 import UIKit
 
-class DetalleViewController: UIViewController {
+class DetalleViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     @IBOutlet weak var campoNombre: UITextField!
     @IBOutlet weak var campoSerie: UITextField!
     @IBOutlet weak var campoPrecio: UITextField!
     @IBOutlet weak var labelFecha: UILabel!
-    var cosaADetallar: Cosa!
+    @IBOutlet weak var foto: UIImageView!
+    
+    
+    var cosaADetallar: Cosa! {
+        didSet { //Property Observer
+            navigationItem.title = self.cosaADetallar.nombre
+        }
+    }
+    let formatoDeFecha : DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter
+    } ()
+    
+    let formatoDePrecio : NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        return formatter
+    } ()
+    
+    var inventarioDeImagenes : InventarioDeImagenes!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.campoNombre.delegate = self
+        self.campoPrecio.delegate = self
+        self.campoSerie.delegate = self
         self.campoNombre.text = cosaADetallar.nombre
         self.campoSerie.text = cosaADetallar.numeroDeSerie
-        self.campoPrecio.text = "$\(cosaADetallar.valorEnPesos)"
-        self.labelFecha.text = "\(cosaADetallar.fechaDeCreacion)"
+//        self.campoPrecio.text = "$\(cosaADetallar.valorEnPesos)"
+//        self.labelFecha.text = "\(cosaADetallar.fechaDeCreacion)"
+        self.campoPrecio.text = formatoDePrecio.string(from: NSNumber(value: self.cosaADetallar.valorEnPesos))
+        self.labelFecha.text = formatoDeFecha.string(from: cosaADetallar.fechaDeCreacion)
+        self.foto.image = self.inventarioDeImagenes.getImagen(paraLaLLave: cosaADetallar.llaveCosa)
     }
     
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        cosaADetallar.nombre = self.campoNombre.text ?? ""
+        cosaADetallar.numeroDeSerie = self.campoSerie.text ?? ""
+        if let valor = campoPrecio.text, let valorInt = formatoDePrecio.number(from: valor) {
+            cosaADetallar.valorEnPesos = valorInt.intValue
+        } else {
+            cosaADetallar.valorEnPesos = 0
+        }
+    }
+    
+    @IBAction func tomaFoto(_ sender: UIBarButtonItem) {
+        let picker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        } else {
+            picker.sourceType = .photoLibrary
+        }
+        
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let imagen = info[.originalImage] as! UIImage
+        self.foto.image = imagen
+        self.inventarioDeImagenes.setImagen(imagen: imagen, paraLaLLave: cosaADetallar.llaveCosa)
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -18,6 +18,7 @@
 		94E5B2AB234EB1D30056E856 /* Cosa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E5B2AA234EB1D30056E856 /* Cosa.swift */; };
 		94E5B2AD234EB5F90056E856 /* Inventario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E5B2AC234EB5F90056E856 /* Inventario.swift */; };
 		94E5B2AF234EB72F0056E856 /* CosasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E5B2AE234EB72F0056E856 /* CosasTableViewController.swift */; };
+		94E9EA3C23611C17002272FE /* InventarioDeImagenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E9EA3B23611C17002272FE /* InventarioDeImagenes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		94E5B2AA234EB1D30056E856 /* Cosa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosa.swift; sourceTree = "<group>"; };
 		94E5B2AC234EB5F90056E856 /* Inventario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventario.swift; sourceTree = "<group>"; };
 		94E5B2AE234EB72F0056E856 /* CosasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosasTableViewController.swift; sourceTree = "<group>"; };
+		94E9EA3B23611C17002272FE /* InventarioDeImagenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventarioDeImagenes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				94E5B2AA234EB1D30056E856 /* Cosa.swift */,
+				94E9EA3B23611C17002272FE /* InventarioDeImagenes.swift */,
 				94E5B2AC234EB5F90056E856 /* Inventario.swift */,
 				94E5B2AE234EB72F0056E856 /* CosasTableViewController.swift */,
 				94E5B27C234EB1980056E856 /* AppDelegate.swift */,
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E9EA3C23611C17002272FE /* InventarioDeImagenes.swift in Sources */,
 				94E4741D2357EB6B0024E24C /* DetalleViewController.swift in Sources */,
 				94E4741B2357DE5E0024E24C /* CosaTableViewCell.swift in Sources */,
 				94E5B2AB234EB1D30056E856 /* Cosa.swift in Sources */,
